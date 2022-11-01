@@ -11,18 +11,18 @@ datasource db {
 }
 
 model User {
-  id      Int      @id @default(autoincrement())
-  name    String?  @db.VarChar(255)
-  email   String   @unique @db.VarChar(255)
+  id Int @id @default(autoincrement())
+  username String @unique @db.VarChar(50)
+  password String @db.VarChar(20)
   Vehicles Vehicles[]
 }
 
 model Vehicles {
-  id    Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
   brand String  
-  name  String
+  name String
   image String @db.VarChar(255)
   carModel String
-  user User? @relation(fields: [userId], references: [id])
+  user User @relation(fields: [userId], references: [id])
   userId Int
 }
