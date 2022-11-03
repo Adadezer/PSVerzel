@@ -1,21 +1,24 @@
+import { useState } from 'react'
 import { Grid, TextField } from '@mui/material'
-import React from 'react'
 
-function inputStringGeneric(props) {
+export default function InputStringGeneric(props) {
+  const [ valueInput, setValueInput ] = useState('');
+
+  const handleChange = ({ value }) => {
+    setValueInput(value);
+    console.log('valueInput:', value);
+  };
+
   return (
     <Grid item {...props} >
       <TextField
         fullWidth
-        // required= {props.isRequired}
-        // error= {isNameInvalid}
-        // value={name}
-        // onChange={(e) => validationName(e.target)}
+        value={valueInput}
+        onChange={(e) => handleChange(e.target)}
         helperText={props.helperText}
         label= {props.label}
         variant="outlined"
       />
     </Grid>
-  )
+  );
 }
-
-export default inputStringGeneric

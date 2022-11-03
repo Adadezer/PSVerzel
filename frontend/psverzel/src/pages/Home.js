@@ -15,14 +15,14 @@ function Home() {
         sx={{ overflow: 'auto', maxHeight: '86vh' }}
       >
         <InputStringGeneric
-          label={'brand'}
+          label={'marca'}
           helperText={'digite a marca do veículo'}
           xs={12}
           md={6}
         />
 
         <InputStringGeneric
-          label={'name'}
+          label={'nome'}
           helperText={'digite o nome do veículo'}
           xs={12}
           md={6}
