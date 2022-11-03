@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 import UserService from '../services/userService';
 
 export default class getUsers {
@@ -7,7 +7,6 @@ export default class getUsers {
   public async getUsers(
     _req: Request,
     res: Response,
-    next: NextFunction
   ): Promise<Response | void> {
     try {
       const allUsers = await this.userService.getUsers();

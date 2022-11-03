@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response, Router } from 'express';
+import { Request, Response, Router } from 'express';
 import UserController from '../controllers/userController';
 import { PrismaClient } from '@prisma/client';
 import UserModel from '../models/userModel';
@@ -11,8 +11,8 @@ const userModel = new UserModel(prisma);
 const userService = new UserService(userModel);
 const userController = new UserController(userService);
 
-router.get('/', async (req: Request, res: Response, next: NextFunction) => {
-  userController.getUsers(req, res, next)
+router.get('/', async (req: Request, res: Response) => {
+  userController.getUsers(req, res)
 });
 
 export default router;
