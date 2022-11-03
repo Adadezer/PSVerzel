@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import InputStringGeneric from "../components/InputStringGeneric";
+import ButtonCreate from "../components/ButtonCreate";
 
 function Home() {
   return (
@@ -15,29 +16,35 @@ function Home() {
         sx={{ overflow: 'auto', maxHeight: '86vh' }}
       >
         <InputStringGeneric
-          label={'marca'}
+          label={'brand'}
           helperText={'digite a marca do veículo'}
           xs={12}
           md={6}
         />
 
         <InputStringGeneric
-          label={'nome'}
+          label={'name'}
           helperText={'digite o nome do veículo'}
           xs={12}
           md={6}
         />
 
         <InputStringGeneric
-          label={'modelo'}
+          label={'carModel'}
           helperText={'digite o modelo do veículo'}
           xs={12}
           md={6}
         />
 
         <InputStringGeneric
-          label={'imagem'}
+          label={'image'}
           helperText={'coloque o caminho da imagem'}
+          xs={12}
+          md={6}
+        />
+
+        <ButtonCreate
+          text={'Enviar'}
           xs={12}
           md={6}
         />
