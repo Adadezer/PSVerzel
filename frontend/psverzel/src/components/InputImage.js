@@ -9,8 +9,10 @@ export default function InputImage(props) {
         variant="contained"
         component="label"
       >
-        Carregar Foto
+        {props.text}
         <input
+          accept="image/*"
+          multiple
           type="file"
         />
       </Button>
