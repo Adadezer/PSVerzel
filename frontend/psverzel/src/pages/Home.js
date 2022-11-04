@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import InputStringGeneric from "../components/InputStringGeneric";
 import ButtonCreate from "../components/ButtonCreate";
+import InputImage from "../components/InputImage";
 
 function Home() {
   return (
@@ -19,34 +20,32 @@ function Home() {
           label={'brand'}
           helperText={'digite a marca do veículo'}
           xs={12}
-          md={6}
+          md={4}
         />
 
         <InputStringGeneric
           label={'name'}
           helperText={'digite o nome do veículo'}
           xs={12}
-          md={6}
+          md={4}
         />
 
         <InputStringGeneric
           label={'carModel'}
           helperText={'digite o modelo do veículo'}
           xs={12}
-          md={6}
+          md={4}
         />
 
-        <InputStringGeneric
-          label={'image'}
-          helperText={'coloque o caminho da imagem'}
+        <InputImage
           xs={12}
-          md={6}
+          md={12}
         />
 
         <ButtonCreate
           text={'Enviar'}
           xs={12}
-          md={6}
+          md={12}
         />
       </Grid>
     </>
