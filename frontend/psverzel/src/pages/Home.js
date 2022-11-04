@@ -2,11 +2,37 @@ import { Grid } from "@mui/material";
 import InputStringGeneric from "../components/InputStringGeneric";
 import ButtonCreate from "../components/ButtonCreate";
 import InputImage from "../components/InputImage";
+import axios from 'axios';
+import { useEffect, useState } from "react";
+import CardVehicle from "../components/CardVehicle";
 
-function Home() {
+export default function Home() {
+  const [vehicles, setVehicles] = useState([]);
+  const getVehicles = async () => {
+    try {
+      const result = await axios.get('http://localhost:3001/vehicles');
+      setVehicles(result.data);
+      return result.data;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  console.log('vehicles: ', vehicles);
+
+  useEffect(() => {
+    getVehicles();
+  }, []);
+
   return (
     <>
       <div>Home</div>
+      <div>
+        {
+          vehicles.map((element, index) => (
+            <CardVehicle vehicle={ element } key={`${element}-${index}`} />
+          ))
+        }
+      </div>
       <Grid
         container
         component="form"
@@ -38,6 +64,7 @@ function Home() {
         />
 
         <InputImage
+          text={'Carregar Foto'}
           xs={12}
           md={12}
         />
@@ -51,5 +78,3 @@ function Home() {
     </>
   );
 }
-
-export default Home;
