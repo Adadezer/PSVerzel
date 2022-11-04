@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PsVerzelContext from './PsVerzelContext';
 
 export default function InputsProvider({ children }) {
-  const [valueInput, setValueInput] = useState({brand: '', name: '', carModel: ''});
+  const [valueInput, setValueInput] = useState({brand: '', name: '', carModel: '', image: ''});
 
   const myContext = {
     valueInput,
