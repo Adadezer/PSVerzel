@@ -25,7 +25,6 @@ export default function Home() {
 
   return (
     <>
-      <div>Home</div>
       <div>
         {
           vehicles.map((element, index) => (
