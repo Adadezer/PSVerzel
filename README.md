@@ -9,15 +9,17 @@
 - `cd backend`
 - `npm install`
 
-3- O banco de dados usado no projeto é o MySQL, e o ORM é o Prisma, é necessário criar um arquivo .env na raiz da pasta backend com o seguinte conteúdo:
+3- O banco de dados usado no projeto é o MySQL, e o ORM é o Prisma, é necessário criar um arquivo `.env` na raiz da pasta backend com o seguinte conteúdo:
 ```
 DATABASE_URL="mysql://{usuário do banco}:{senha do banco}@localhost:3306/psverzel?schema=public"
 
 APP_PORT=3001 
 ```
-4- Execute a migration para criar o banco com as tabelas:
+existe um arquivo de exemplo que poderá ser consultado
 
-- `npx prisma migrate`
+4- Após criar o arquivo `.env` e adicionar as configurações, execute a migration para criar o banco com as tabelas e o usuário admin:
+
+- `npx prisma migrate dev`
 
 com esse comando será criado no mysql um banco de dados chamado psverzel com as tabelas User e Vehicles
 
