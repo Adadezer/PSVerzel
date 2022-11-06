@@ -21,25 +21,21 @@ APP_PORT=3001
 
 com esse comando será criado no mysql um banco de dados chamado psverzel com as tabelas User e Vehicles
 
-5- O projeto não tem uma rota para cadastrar o usuário, será necessário criar esse usuário para poder fazer as requisições com um comando sql, segue abaixo:
-
-- `INSERT INTO psverzel.User (username,password) Values('adm', '1234')`
-
-6- Após criar o usuário, rode o servidor:
+5- Após criar o banco de dados, rode o servidor:
 
 - `npm run dev`
 será exibida a mensagem "Api rodando na porta 3001"
 
-7- Com o backend rodando, abra outra aba no terminal para executar o frontend, partindo da pasta raiz do projeto (PSVerzel), digite no terminal:
+6- Com o backend rodando, abra outra aba no terminal para executar o frontend, partindo da pasta raiz do projeto (PSVerzel), digite no terminal:
 
 - `cd frontend`
 
-8- Dentro da pasta do frontend, entre na pasta chamada psverzel, e instale as dependências:
+7- Dentro da pasta do frontend, entre na pasta chamada psverzel, e instale as dependências:
 
 - `cd psverzel`
 - `npm install`
 
-9- Após, execute o projeto:
+8- Após, execute o projeto:
 
 - `npm start`
 
