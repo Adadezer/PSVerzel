@@ -9,7 +9,7 @@
 - `cd backend`
 - `npm install`
 
-3- O banco de dados usado no projeto é o MySQL, e o ORM é o Prisma, é necessário criar um arquivo `.env` na raiz da pasta backend com o seguinte conteúdo:
+3- O banco de dados usado no projeto é o MySQL, e o ORM é o Prisma, é necessário criar um arquivo `.env` na raiz da pasta backend, e adicionar as configurações para a criação do banco. Crie o arquivo e adicione o seguinte conteúdo:
 ```
 DATABASE_URL="mysql://{usuário do banco}:{senha do banco}@localhost:3306/psverzel?schema=public"
 
@@ -26,6 +26,7 @@ com esse comando será criado no mysql um banco de dados chamado psverzel com as
 5- Após criar o banco de dados, rode o servidor:
 
 - `npm run dev`
+
 será exibida a mensagem "Api rodando na porta 3001"
 
 6- Com o backend rodando, abra outra aba no terminal para executar o frontend, partindo da pasta raiz do projeto (PSVerzel), digite no terminal:
@@ -40,6 +41,8 @@ será exibida a mensagem "Api rodando na porta 3001"
 8- Após, execute o projeto:
 
 - `npm start`
+
+O projeto começará a ser carregado e a página será aberta no browser
 
 ## 📌 Considerações
 
